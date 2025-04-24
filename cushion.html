@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>クッションLP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 2rem;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>キャンペーンご紹介ページ</h1>
+    <p>下記ボタンからキャンペーンページに進んでください。</p>
+
+    <a id="campaign-link" class="button" href="#">キャンペーンページへ</a>
+
+    <script>
+      (function () {
+        // クエリパラメータを取得
+        const query = window.location.search;
+
+        // 遷移先URL（本番環境では適切なURLに変更）
+        const baseUrl = 'https://example.com/campaign';
+
+        // ボタンの href を動的にセット
+        const link = document.getElementById('campaign-link');
+        link.href = baseUrl + query;
+      })();
+    </script>
+
+  </body>
+
+</html>
